@@ -1,0 +1,688 @@
+/* ==========================================
+   Google Font
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   Global
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08111f;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2196f3;
+    border-radius:20px;
+}
+
+/* ==========================================
+   Navbar
+========================================== */
+
+.navbar{
+    background:rgba(8,17,31,.85);
+    backdrop-filter:blur(15px);
+    transition:.4s;
+}
+
+.navbar-brand{
+    color:#4db8ff !important;
+    font-size:28px;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:15px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.nav-link:hover{
+    color:#4db8ff !important;
+}
+
+/* ==========================================
+   Hero
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(8,17,31,.92),
+    rgba(8,17,31,.95)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h4{
+
+    color:#4db8ff;
+    font-size:24px;
+}
+
+.hero h1{
+
+    font-size:65px;
+    font-weight:700;
+}
+
+.hero h2{
+
+    color:#4db8ff;
+    margin:15px 0;
+    font-weight:600;
+}
+
+.hero p{
+
+    color:#d4d4d4;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+/* Buttons */
+
+.btn-primary{
+
+    background:#2196f3;
+    border:none;
+    padding:13px 30px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(33,150,243,.5);
+}
+
+.btn-outline-light{
+
+    border-radius:30px;
+    padding:13px 30px;
+    margin-left:15px;
+}
+
+.profile-circle{
+    width:420px;
+    height:420px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid #2196f3;
+    box-shadow:0 15px 35px rgba(33,150,243,.35);
+}
+
+.profile-circle img{
+    width:100%;
+    height:100%;
+
+    /* Show the entire image */
+    object-fit:cover;
+
+    /* White background matches passport photo */
+    background:#fff;
+
+    /* Center the image */
+    object-position:center center;
+}
+
+.profile-circle:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 45px rgba(33,150,243,.6);
+}
+/* ==========================================
+   Sections
+========================================== */
+
+.section{
+
+    padding:90px 0;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#4db8ff;
+
+    margin-bottom:60px;
+
+    position:relative;
+}
+
+.section-title::after{
+
+content:"";
+
+width:80px;
+
+height:4px;
+
+background:#2196f3;
+
+display:block;
+
+margin:15px auto;
+
+border-radius:10px;
+}
+
+/* About Section */
+
+.about-content{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content h3{
+    font-size:44px;      /* Increased from 38px */
+    color:#ffffff;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+.about-content h3 span{
+    color:#4db8ff;
+}
+
+.about-content p{
+    font-size:24px;      /* Increased from 20px */
+    color:#d4d4d4;
+    line-height:2;
+    text-align:justify;
+}
+
+/* Highlight */
+
+.about-content strong{
+    color:#ffffff;
+    font-weight:700;
+}
+
+.highlight{
+    color:#4db8ff;
+    font-weight:700;
+}
+
+.skill{
+    color:#64b5ff;
+    font-weight:600;
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.skill-card,
+.experience-card,
+.education-card,
+.certificate-card{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:30px;
+
+transition:.4s;
+
+height:100%;
+
+margin-bottom:30px;
+}
+
+.skill-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.certificate-card:hover{
+
+transform:translateY(-12px);
+
+border-color:#2196f3;
+
+box-shadow:0 15px 35px rgba(33,150,243,.35);
+}
+
+.skill-card h3,
+.experience-card h3,
+.education-card h3,
+.certificate-card h3{
+
+color:#4db8ff;
+
+margin-bottom:20px;
+
+font-size:28px;
+}
+
+.skill-card ul{
+
+list-style:none;
+
+padding-left:0;
+}
+
+.skill-card li{
+
+margin-bottom:12px;
+
+padding-left:28px;
+
+position:relative;
+
+color:#d8d8d8;
+}
+
+.skill-card li::before{
+
+content:"✓";
+
+position:absolute;
+
+left:0;
+
+color:#4db8ff;
+
+font-weight:bold;
+}
+
+.experience-card h5{
+
+color:#ffffff;
+
+margin-bottom:10px;
+}
+
+.education-card span{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:8px 18px;
+
+background:#2196f3;
+
+border-radius:25px;
+
+font-weight:600;
+}
+
+/* ==========================================
+   Contact
+========================================== */
+
+#contact p{
+
+font-size:20px;
+
+margin:20px 0;
+
+color:#dddddd;
+}
+
+#contact i{
+
+color:#4db8ff;
+
+margin-right:10px;
+
+font-size:22px;
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+footer{
+
+padding:25px;
+
+text-align:center;
+
+background:#050b15;
+
+color:#bdbdbd;
+
+font-size:15px;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:992px){
+
+.hero{
+
+text-align:center;
+
+padding-top:120px;
+}
+
+.hero h1{
+
+font-size:48px;
+}
+
+.hero h2{
+
+font-size:30px;
+}
+
+.profile-circle{
+
+margin-top:50px;
+
+width:240px;
+
+height:240px;
+
+font-size:90px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+}
+
+.hero p{
+
+font-size:17px;
+}
+
+.section-title{
+
+font-size:34px;
+}
+
+.btn-primary,
+.btn-outline-light{
+
+display:block;
+
+margin:15px auto;
+
+width:220px;
+}
+
+.profile-circle{
+
+width:200px;
+
+height:200px;
+
+font-size:70px;
+}
+
+}
+/*=========================
+        Awards
+==========================*/
+
+.certificate-box{
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    transition:.4s;
+}
+
+.certificate-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.certificate-box h3{
+    color:#4db8ff;
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.certificate-box h5{
+    color:#ffffff;
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.certificate-box p{
+    color:#d4d4d4;
+    font-size:17px;
+    line-height:28px;
+    margin-bottom:30px;
+}
+
+.certificate-box .btn-primary{
+    background:#2196f3;
+    border:none;
+    border-radius:30px;
+    padding:12px 28px;
+    transition:.3s;
+}
+
+.certificate-box .btn-primary:hover{
+    background:#1976d2;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(33,150,243,.4);
+}
+/*=====================================
+        Work Experience
+======================================*/
+
+.experience-wrapper{
+    max-width:1000px;
+    margin:0 auto;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:45px;
+    transition:.4s;
+}
+
+.experience-wrapper:hover{
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.company-header{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-bottom:45px;
+}
+
+.company-header img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    border-radius:12px;
+    background:#ffffff;
+    padding:10px;
+}
+
+.company-header h3{
+    color:#4db8ff;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.company-header p{
+    color:#ffffff;
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.company-header span{
+    color:#bdbdbd;
+    font-size:18px;
+}
+
+/* Timeline */
+
+.timeline{
+    position:relative;
+    margin-left:45px;
+    padding-left:35px;
+    border-left:3px solid rgba(255,255,255,.15);
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:50px;
+}
+
+.timeline-item:last-child{
+    margin-bottom:0;
+}
+
+.dot{
+    position:absolute;
+    left:-46px;
+    top:10px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#4db8ff;
+    border:4px solid #08111f;
+    box-shadow:0 0 15px rgba(77,184,255,.8);
+}
+
+.content{
+    padding-left:15px;
+}
+
+.content h4{
+    color:#ffffff;
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.content span{
+    display:block;
+    color:#9ca3af;
+    font-size:19px;
+    margin-bottom:20px;
+}
+
+.content p{
+    color:#d4d4d4;
+    font-size:19px;
+    line-height:34px;
+    margin-bottom:14px;
+}
+
+.content strong{
+    color:#ffffff;
+    font-size:20px;
+    font-weight:600;
+}
+
+.content:hover{
+    transform:translateX(8px);
+    transition:.3s;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .experience-wrapper{
+        padding:30px;
+    }
+
+    .company-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .company-header img{
+        width:75px;
+        height:75px;
+    }
+
+    .company-header h3{
+        font-size:28px;
+    }
+
+    .company-header p{
+        font-size:18px;
+    }
+
+    .company-header span{
+        font-size:16px;
+    }
+
+    .timeline{
+        margin-left:20px;
+        padding-left:25px;
+    }
+
+    .dot{
+        left:-35px;
+    }
+
+    .content h4{
+        font-size:24px;
+    }
+
+    .content span{
+        font-size:16px;
+    }
+
+    .content p{
+        font-size:17px;
+        line-height:30px;
+    }
+}
